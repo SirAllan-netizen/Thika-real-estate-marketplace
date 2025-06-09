@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Thika Real Estate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        /* Background for hero section */
+        .hero {
+            background-image: url('Thika.jpg'); /* Ensure correct path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        /* Dark overlay for better text readability */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+            z-index: 1;
+        }
+
+        /* Ensure hero content is visible above overlay */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 80%;
+        }
+
+        /* White background for about content */
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold text-blue-600">Thika Real Estate</h1>
+            <ul class="flex space-x-6 text-gray-900 font-semibold">
+                <li><a href="index.php" class="text-blue-600 font-bold">Home</a></li>
+                <li><a href="properties.html" class="hover:text-blue-500">Properties</a></li>
+                <li><a href="about.html" class="hover:text-blue-500">About</a></li>
+                <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+                <li><a href="login.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2 class="text-4xl font-bold mb-4">About Thika Real Estate</h2>
+            <p class="text-lg">Your Trusted Partner in Finding the Perfect Home</p>
+        </div>
+    </header>
+
+    <!-- About Content Section -->
+    <section class="content container mx-auto px-6 py-10">
+        <h3 class="text-3xl font-bold text-center mb-8">Who We Are</h3>
+        <p class="text-gray-700 text-lg text-center max-w-3xl mx-auto">
+            Thika Real Estate is the leading platform for rental and property listings in Thika.
+            With a deep understanding of the local housing market, we connect renters with
+            their dream homes while offering landlords a seamless way to list their properties.
+        </p>
+
+        <!-- Mission & Values -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <h4 class="text-xl font-bold text-blue-600 mb-3">Our Mission</h4>
+                <p class="text-gray-700">
+                    Our mission is to simplify the process of finding rental homes in Thika by
+                    providing accurate listings, expert insights, and exceptional customer service.
+                </p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <h4 class="text-xl font-bold text-blue-600 mb-3">Our Values</h4>
+                <ul class="text-gray-700 list-disc pl-5">
+                    <li>Integrity and Transparency</li>
+                    <li>Customer-Centered Service</li>
+                    <li>Innovation in Real Estate</li>
+                    <li>Commitment to Excellence</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="mt-10 text-center">
+            <h4 class="text-xl font-bold text-blue-600">Get in Touch</h4>
+            <p class="text-gray-700">Have questions? Reach out to us anytime!</p>
+            <p class="text-gray-700"><i class="fas fa-phone-alt"></i> +254 700 123 456</p>
+            <p class="text-gray-700"><i class="fas fa-envelope"></i> info@thikarealestate.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+        <p>&copy; 2025 Thika Real Estate. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

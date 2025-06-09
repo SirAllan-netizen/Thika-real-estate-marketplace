@@ -1,0 +1,6 @@
+Array
+(
+    [requestId] => aa10-4361-b7cd-2aa0e34ed7e446492
+    [errorCode] => 400.002.02
+    [errorMessage] => Bad Request - Invalid BusinessShortCode
+)

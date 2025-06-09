@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List a Property</title>
+</head>
+<body>
+    <h2>List Your Property</h2>
+    <form action="add_listing.php" method="POST" enctype="multipart/form-data">
+        <label for="title">Property Title:</label>
+        <input type="text" name="title" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" required><br>
+c:</label>
+        <select name="type" required>
+            <option value="Apartment">Apartment</option>
+            <option value="House">House</option>
+            <option value="Villa">Villa</option>
+        </select><br>
+
+        <label for="price">Price (KES):</label>
+        <input type="number" name="price" step="0.01" required><br>
+
+        <label for="description">Description:</label>
+        <textarea name="description" required></textarea><br>
+
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" accept="image/*"><br>
+
+        <label for="listing_type">Select Listing Type:</label>
+        <select name="listing_type" id="listing_type" onchange="toggleMpesaCodeField()" required>
+            <option value="basic">Basic (Free Listing)</option>
+            <option value="premium">Premium (KES 500 - Pay via Mpesa)</option>
+        </select><br>
+
+        <!-- Mpesa Code Input -->
+        <div id="mpesaCodeField" style="display: none;">
+            <label for="mpesa_code">Enter Mpesa Code:</label>
+            <input type="text" name="mpesa_code"><br>
+        </div>
+
+        <button type="submit">Submit Listing</button>
+    </form>
+
+    <script>
+        function toggleMpesaCodeField() {
+            var listingType = document.getElementById("listing_type").value;
+            var mpesaField = document.getElementById("mpesaCodeField");
+
+            if (listingType === "premium") {
+                mpesaField.style.display = "block";
+            } else {
+                mpesaField.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

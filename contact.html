@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Thika Real Estate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        /* Futuristic Background */
+        body {
+            background: url('Thika.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        /* Glassmorphic Contact Form */
+        .contact-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            width: 400px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Neon Input Fields */
+        .contact-input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            outline: none;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .contact-input:focus {
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Neon Glow Button */
+        .contact-btn {
+            background: linear-gradient(90deg, #00d4ff, #007cff);
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-info i {
+            margin-right: 8px;
+            color: #00d4ff;
+        }
+
+        /* Hover Effect for Links */
+        .contact-info a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-info a:hover {
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+        <p class="text-sm text-gray-300 mb-6">We are here to assist you. Fill out the form below.</p>
+
+        <form action="submit_contact.php" method="POST">
+            <input type="text" class="contact-input" placeholder="Your Name" required>
+            <input type="email" class="contact-input" placeholder="Your Email" required>
+            <textarea class="contact-input" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="contact-btn mt-4">Send Message</button>
+        </form>
+
+        <div class="contact-info mt-6">
+            <p><i class="fas fa-phone-alt"></i> +254 700 123 456</p>
+            <p><i class="fas fa-envelope"></i> info@thikarealestate.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Thika, Kenya</p>
+        </div>
+    </div>
+
+</body>
+</html>

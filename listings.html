@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - Thika Real Estate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        /* Futuristic Background */
+        body {
+            background: url('Thika.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        /* Glassmorphic Property Cards */
+        .property-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .property-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+        }
+
+        /* Neon Input Fields */
+        .search-bar {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            outline: none;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .search-bar:focus {
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Search Button */
+        .search-btn {
+            background: linear-gradient(90deg, #00d4ff, #007cff);
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-btn:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="bg-black bg-opacity-80 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold text-blue-400">Thika Real Estate</h1>
+            <ul class="flex space-x-6 text-gray-300 font-semibold">
+                <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+                <li><a href="properties.html" class="text-blue-400 font-bold">Properties</a></li>
+                <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+                <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                <li><a href="login.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="text-center py-16">
+        <h2 class="text-4xl font-bold">Find Your Dream Property</h2>
+        <p class="text-lg text-gray-300 mt-2">Explore our exclusive listings in Thika</p>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-4">
+            <input type="text" class="search-bar w-full md:w-1/3" placeholder="Search by location...">
+            <select class="search-bar w-full md:w-1/4">
+                <option>Property Type</option>
+                <option>Apartments</option>
+                <option>Houses</option>
+                <option>Villas</option>
+            </select>
+            <select class="search-bar w-full md:w-1/4">
+                <option>Price Range</option>
+                <option>Below KES 50,000</option>
+                <option>KES 50,000 - 100,000</option>
+                <option>Above KES 100,000</option>
+            </select>
+            <button class="search-btn md:w-1/4">Search</button>
+        </div>
+    </section>
+
+    <!-- Properties List -->
+    <section class="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="property-card">
+            <img src="Modern Apartment.webp" class="w-full rounded-md">
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Modern Apartment</h3>
+                <p class="text-gray-300">KES 50,000/month - Thika</p>
+                <a href="property.html?id=1" class="text-blue-400 inline-block mt-2">View Details</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="spacious family.jpg" class="w-full rounded-md">
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Spacious Family House</h3>
+                <p class="text-gray-300">KES 75,000/month - Thika</p>
+                <a href="property.html?id=2" class="text-blue-400 inline-block mt-2">View Details</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="villas.avif" class="w-full rounded-md">
+            <div class="p-4">
+                <h3 class="text-xl font-bold">Luxury Villa</h3>
+                <p class="text-gray-300">KES 150,000/month - Thika</p>
+                <a href="property.html?id=3" class="text-blue-400 inline-block mt-2">View Details</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-6 mt-10">
+        <p>&copy; 2025 Thika Real Estate. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
